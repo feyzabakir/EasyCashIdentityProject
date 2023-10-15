@@ -3,4 +3,33 @@
     Layout = null;
 }
 
-<h2>Burası My Profile Sayfasıdır</h2>
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_CustomerLayoutHeaderPartial")
+
+<body class="nav-md footer_fixed">
+    <div class="container body">
+        <div class="main_container">
+
+            @await Component.InvokeAsync("_CustomerLayoutSidebarPartial")
+
+            @await Component.InvokeAsync("_CustomerLayoutNavbarPartial")
+
+            <div class="right_col" role="main">
+                <div class="">
+                    <div class="page-title">
+                        <div class="title_left">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @await Component.InvokeAsync("_CustomerLayoutFooterPartial")
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("_CustomerLayoutScriptPartial")
+
+</body>
+</html>
