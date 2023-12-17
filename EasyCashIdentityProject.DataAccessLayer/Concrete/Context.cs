@@ -19,6 +19,7 @@ namespace EasyCashIdentityProject.DataAccessLayer.Concrete
 
         public DbSet<CustomerAccount> CustomerAccounts { get; set; }
         public DbSet<CustomerAccountProcess> CustomerAccountProcesses { get; set; }
+        public DbSet<ElectricBill> ElectricBills { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
